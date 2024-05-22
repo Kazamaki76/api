@@ -2,6 +2,7 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
 import { UserService } from './user.service';
 import { Prisma } from '@prisma/client';
+import { Throttle,SkipThrottle } from '@nestjs/throttler';
 
 @Controller('user')
 export class UserController {
@@ -12,11 +13,13 @@ export class UserController {
     return this.userService.create(createUserDto);
   }
 
+  @SkipThrottle({defaults: false})
   @Get()
   findAll() {
     return this.userService.findAll();
   }
 
+  @Throttle({ short : {ttl: 1000, limit: 1}})
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.userService.findOne(+id);
