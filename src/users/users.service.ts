@@ -1,4 +1,4 @@
-/* eslint-disable prettier/prettier */
+
 import { Injectable } from '@nestjs/common';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
@@ -7,38 +7,7 @@ import { NotFoundException } from '@nestjs/common';
 
 @Injectable()
 export class UsersService {
-    private users = [
-        {
-            "id": 1,
-            "name": "Leanne Graham",
-            "email": "Sincere@april.biz",
-
-        },
-        {
-            "id": 2,
-            "name": "Ervin Howell",
-            "email": "Shanna@melissa.tv",
-
-        },
-        {
-            "id": 3,
-            "name": "Clementine Bauch",
-            "email": "Nathan@yesenia.net",
-
-        },
-        {
-            "id": 4,
-            "name": "Patricia Lebsack",
-            "email": "Julianne.OConner@kory.org",
-
-        },
-        {
-            "id": 5,
-            "name": "Chelsey Dietrich",
-            "email": "Lucio_Hettinger@annie.ca",
-
-        }
-    ]
+    
 
     findAll() {
         return this.users;
