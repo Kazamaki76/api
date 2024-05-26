@@ -7,6 +7,7 @@ import { UserModule } from './user/user.module';
 import { ThrottlerModule,ThrottlerGuard } from '@nestjs/throttler';
 import { APP_GUARD } from '@nestjs/core';
 import { PostModule } from './post/post.module';
+import { CommentModule } from './comment/comment.module';
 
 
 @Module({
@@ -24,6 +25,7 @@ import { PostModule } from './post/post.module';
     limit: 100
   }]),
   PostModule,
+  CommentModule,
 ],
   controllers: [AppController],
   providers: [AppService ,{
