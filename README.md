@@ -24,7 +24,35 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+ Backend for A board
+ ## Project Overview
+
+This backend serves as the core for the "A board" frontend, providing a robust RESTful API. It is designed to handle CRUD operations for users, comments, and posts, facilitating dynamic interactions within the application.
+## Technology Stack
+
+- **Prisma**: Handles ORM functionalities, interfacing seamlessly with the database.
+- **Neon serverless PostgreSQL**: Provides a scalable and serverless database solution, ensuring efficient data management.
+- **NestJS**: Utilized for structuring the backend with a focus on modularity, scalability, and maintainability.
+
+## API Endpoints
+
+### Users
+- **Create User**: `POST /users` — Adds a new user to the system.
+- **Retrieve Users**: `GET /users` — Retrieves a list of all users.
+- **Update User**: `PUT /users/{userId}` — Updates user information.
+- **Delete User**: `DELETE /users/{userId}` — Removes a user from the system.
+
+### Comments
+- **Create Comment**: `POST /comments` — Adds a new comment to a post.
+- **Retrieve Comments**: `GET /comments` — Retrieves all comments.
+- **Update Comment**: `PUT /comments/{commentId}` — Updates the text of a comment.
+- **Delete Comment**: `DELETE /comments/{commentId}` — Deletes a comment.
+
+### Posts
+- **Create Post**: `POST /posts` — Creates a new post.
+- **Retrieve Posts**: `GET /posts` — Lists all posts.
+- **Update Post**: `PUT /posts/{postId}` — Edits an existing post.
+- **Delete Post**: `DELETE /posts/{postId}` — Removes a post.
 
 ## Installation
 
@@ -44,30 +72,5 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
 ## License
-
 Nest is [MIT licensed](LICENSE).
