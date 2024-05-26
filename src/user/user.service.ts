@@ -14,7 +14,7 @@ export class UserService {
   }
 
   async findOne(id: number) {
-    return this.databaseService.user.findUnique({ where: { id } });
+    return this.databaseService.user.findUnique({ where: { id }, include: { posts: true } });
   }
 
   async update(id: number, updateUserDto: Prisma.UserUpdateInput) {
