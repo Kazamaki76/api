@@ -58,6 +58,7 @@ This backend serves as the core for the "A board" frontend, providing a robust R
 
 ```bash
 $ npm install
+
 ```
 
 ## Running the app
@@ -65,9 +66,11 @@ $ npm install
 ```bash
 # development
 $ npm run start
+If env not found, try npx prisma generate,
 
 # watch mode
 $ npm run start:dev
+
 
 # production mode
 $ npm run start:prod
